@@ -18,7 +18,7 @@ const mailer = nodemailer.createTransport({
   },
 })
 
-app.post("/api/contact", function (req, res) {
+app.post("/handleForm", function (req, res) {
 
   mailer.sendMail(
     {
