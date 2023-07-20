@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "./handleForm.js",
+        "src": "/api/handleForm.js",
         "use": "@vercel/node"
       }
     ],
