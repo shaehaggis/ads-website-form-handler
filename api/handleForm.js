@@ -5,6 +5,8 @@ require('dotenv').config();
 const cors = require('cors');
 
 const app = express()
+app.use(express.json());
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
 
@@ -18,7 +20,7 @@ const mailer = nodemailer.createTransport({
   },
 })
 
-app.post("/handleForm", function (req, res) {
+app.post("/", function (req, res) {
 
   mailer.sendMail(
     {
