@@ -18,6 +18,10 @@ const mailer = nodemailer.createTransport({
   },
 })
 
+app.get('/', (req, res) => {
+    res.send("This is a service not a webpage.");
+})
+
 app.post("/contact", function (req, res) {
 
   mailer.sendMail(
