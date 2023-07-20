@@ -8,8 +8,8 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "./handleForm.js",
+        "src": "/api/handleForm",
+        "dest": "/api/handleForm.js",
         "methods": ["POST"],
         "headers": {
           "Access-Control-Allow-Origin": "*"

@@ -5,7 +5,7 @@ require('dotenv').config();
 const cors = require('cors');
 
 const app = express()
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
 
 const contactAddress = "shae.haggis@gmail.com"
@@ -18,11 +18,7 @@ const mailer = nodemailer.createTransport({
   },
 })
 
-app.get('/', (req, res) => {
-    res.send("This is a service not a webpage.");
-})
-
-app.post("/contact", function (req, res) {
+app.post("/api/contact", function (req, res) {
 
   mailer.sendMail(
     {
@@ -41,4 +37,4 @@ app.post("/contact", function (req, res) {
   )
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)

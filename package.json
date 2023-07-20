@@ -2,8 +2,8 @@
   "name": "ads-form-handler",
   "version": "1.0.0",
   "description": "",
-  "main": "handleForm.js",
   "scripts": {
+    "start": "node api/handleForm.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
